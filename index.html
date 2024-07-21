@@ -11,7 +11,25 @@
         <h1>To-Do List</h1>
         <div class="input-section">
             <input type="text" id="taskInput" placeholder="Add a new task...">
+            <input type="date" id="dueDateInput" placeholder="Due date">
+            <select id="priorityInput">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
             <button id="addTaskButton">Add Task</button>
+        </div>
+        <div class="filter-section">
+            <button id="showAllButton">All</button>
+            <button id="showCompletedButton">Completed</button>
+            <button id="showIncompleteButton">Incomplete</button>
+        </div>
+        <div class="sort-section">
+            <button id="sortByDueDateButton">Sort by Due Date</button>
+            <button id="sortByPriorityButton">Sort by Priority</button>
+        </div>
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
         </div>
         <ul id="taskList"></ul>
     </div>

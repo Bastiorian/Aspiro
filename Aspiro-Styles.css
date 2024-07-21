@@ -23,11 +23,11 @@ h1 {
 
 .input-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-#taskInput {
-    flex-grow: 1;
+.input-section input, .input-section select {
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -40,7 +40,6 @@ h1 {
     color: white;
     cursor: pointer;
     border-radius: 3px;
-    margin-left: 10px;
 }
 
 #addTaskButton:hover {
@@ -55,35 +54,72 @@ h1 {
 
 .task {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
 
-.task.completed {
+.task.completed span {
     text-decoration: line-through;
     color: #888;
 }
 
 .task button {
     border: none;
-    background-color: #dc3545; /* Red for delete */
+    background-color: #dc3545;
     color: white;
     cursor: pointer;
     border-radius: 3px;
     padding: 5px 10px;
-    margin-left: 5px; /* Add some space between buttons */
+    margin-left: 5px;
 }
 
 .task button:first-child {
-    background-color: #28a745; /* Green for complete */
+    background-color: #28a745;
 }
 
 .task button:nth-child(2) {
-    background-color: #ffc107; /* Yellow for edit */
+    background-color: #ffc107;
 }
 
 .task button:hover {
-    opacity: 0.8; /* Slight opacity change on hover */
+    opacity: 0.8;
 }
 
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.filter-section button, .filter-section select {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.filter-section button:hover, .filter-section select:hover {
+    background-color: #0056b3;
+}
+
+.filter-section select {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.search-section {
+    margin-top: 10px;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
